@@ -68,8 +68,9 @@ Run the following terminal commands to set up your Mac for development.
 - Install Rust and PROS:
 
   ```console
-  brew install rustup purduesigbots/pros/pros-cli
+  brew install rustup python@3.10
   rustup-init -y --default-toolchain nightly
+  pip3.10 install pros-cli
   ```
 
 - Close and reopen the terminal, and finish installing Vexide:
