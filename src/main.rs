@@ -57,6 +57,10 @@ async fn main(peripherals: Peripherals) {
     if let Err(e) = start(peripherals).await {
         println!("Error: {:?}", e);
     }
+
+    loop {
+        sleep(Duration::from_secs(1)).await;
+    }
 }
 
 async fn start(peripherals: Peripherals) -> Result<(), Box<dyn Error>> {

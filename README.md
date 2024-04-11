@@ -18,6 +18,7 @@ Seasoned Vexide user? Delete README.md and update Cargo.toml as needed.
   - [Getting Started (Fedora Linux)](#getting-started-fedora-linux)
   - [Development](#development)
     - [Compiling and uploading to a VEX V5 robot](#compiling-and-uploading-to-a-vex-v5-robot)
+    - [Viewing program output](#viewing-program-output)
     - [Using smart editing features](#using-smart-editing-features)
   - [Troubleshooting](#troubleshooting)
 
@@ -144,10 +145,19 @@ Use the Cargo PROS terminal utility to build and upload this pros-rs project.
 cargo pros build
 ```
 
-Make sure to specify a program slot and post-upload action.
+Use a USB cable to connect to your robot brain or to your controller before uploading. Make sure to specify a program slot and post-upload action.
 
 ```console
 cargo pros upload --slot 1 --action none
+```
+
+### Viewing program output
+
+You can view panic messages and calls to `println!()` using the PROS terminal.
+Use a USB cable to connect to your robot brain or controller, then start the terminal:
+
+```console
+pros terminal --raw
 ```
 
 <!--
