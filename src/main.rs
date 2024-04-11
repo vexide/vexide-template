@@ -55,7 +55,7 @@ impl CompetitionRobot for Robot {
 #[vexide_startup::main]
 async fn main(peripherals: Peripherals) {
     if let Err(e) = start(peripherals).await {
-        println!("Error: {:?}", e);
+        println!("Error: {e}");
     }
 
     loop {
