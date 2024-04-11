@@ -11,11 +11,10 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Setup | Toolchain
-              uses: actions-rs/toolchain@v1
+              uses: dtolnay/rust-toolchain@master
               with:
-                  profile: minimal
                   toolchain: nightly-2024-02-07
-                  override: true
+                  components: rust-src
 
             - name: Check
               uses: actions-rs/cargo@v1
