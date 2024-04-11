@@ -13,6 +13,7 @@ Seasoned Vexide user? Delete README.md and update Cargo.toml as needed.
   - [Using This Template](#using-this-template)
   - [Getting Started (Windows)](#getting-started-windows)
   - [Getting Started (macOS)](#getting-started-macos)
+  - [Getting Started (NixOS)](#getting-started-nixos)
   - [Getting Started (Debian/Ubuntu Linux)](#getting-started-debianubuntu-linux)
   - [Getting Started (Fedora Linux)](#getting-started-fedora-linux)
   - [Development](#development)
