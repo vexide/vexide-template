@@ -33,67 +33,62 @@ edition = "2021"
 
 ## Getting Started (Windows)
 
-Install Rust by following the instructions on <https://rustup.rs/>. Configure your installation when prompted, installing a **nightly** toolchain and keeping other default values.
+Install Rust by following the instructions on <https://rustup.rs/>.
 
 Run the following commands in Powershell to set up your PC for development on Windows.
 
-- Install Python 3.9 and the Embedded ARM Toolchain. You may be prompted for Administrator access.
+- Install Python 3.9:
 
-  ```console
+  ```pwsh
   winget install -s msstore "Python 3.9"
-  winget install Arm.GnuArmEmbeddedToolchain
   ```
 
 - Close and reopen the terminal, and finish installing Vexide:
 
   ```console
   pip3.9 install --user pros-cli
-  rustup component add rust-src
-  cargo install cargo-pros
+  rustup default nightly
+  rustup component add rust-src llvm-tools-preview
+  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
   ```
 
 ## Getting Started (macOS)
 
 Run the following terminal commands to set up your Mac for development.
 
-- Install Homebrew, a package manager for macOS.
+- Install Homebrew, a package manager for macOS:
 
   ```console
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/  install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
 
   - Under the header "Next Steps", Homebrew may prompt you to run commands to complete the installation.
 
-- Install Rustup, the Embedded ARM Toolchain, and PROS:
+- Install Rust and PROS:
 
   ```console
-  brew install rustup osx-cross/arm/arm-gcc-bin purduesigbots/pros/pros-cli
-  ```
-
-- Use Rustup to setup Rust.
-
-  ```console
+  brew install rustup purduesigbots/pros/pros-cli
   rustup-init -y --default-toolchain nightly
   ```
 
 - Close and reopen the terminal, and finish installing Vexide:
 
   ```console
-  rustup component add rust-src
-  cargo install cargo-pros
+  rustup component add rust-src llvm-tools-preview
+  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
   ```
 
 ## Getting Started (Debian/Ubuntu Linux)
 
 Run the following terminal commands to set up your PC for development on Debian or Ubuntu.
 
-- Install Rustup.
+- Install Rust:
 
   ```console
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
 
-- Install Python 3.9 and PROS.
+- Install Python 3.9 and PROS:
 
   ```console
   sudo add-apt-repository ppa:deadsnakes/ppa
@@ -107,18 +102,18 @@ Run the following terminal commands to set up your PC for development on Debian 
 
   ```console
   rustup default nightly
-  rustup component add rust-src --toolchain nightly
-  cargo install cargo-pros
+  rustup component add rust-src llvm-tools-preview
+  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
   ```
 
 ## Getting Started (Fedora Linux)
 
 Run the following terminal commands to set up your PC for development on Fedora.
 
-- Install Rustup, the Embedded ARM Toolchain, PROS, and GCC:
+- Install Rust and PROS:
 
   ```console
-  sudo dnf install rustup python3-pip arm-none-eabi-gcc-cs gcc
+  sudo dnf install rustup python3-pip
   rustup-init -y --default-toolchain nightly
   pip install --user pros-cli
   ```
@@ -126,24 +121,24 @@ Run the following terminal commands to set up your PC for development on Fedora.
 - Close and reopen the terminal, and finish installing Vexide:
 
   ```console
-  rustup component add rust-src
-  cargo install cargo-pros
+  rustup component add rust-src llvm-tools-preview
+  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
   ```
 
 ## Development
 
 ### Compiling and uploading to a VEX V5 robot
 
-Use the Cargo PROS terminal utility to build this pros-rs project.
+Use the Cargo PROS terminal utility to build and upload this pros-rs project.
 
 ```console
 cargo pros build
 ```
 
-The separate `pros` command is used to upload. Plug in your powered VEX robot brain via USB and run the following command to upload to program slot 1. If you changed the package name when setting up this template, you may need to adapt the name of the `.bin` file.
+Make sure to specify a program slot and post-upload action.
 
 ```console
-pros upload --target v5 --slot 1 ./target/armv7a-vexos-eabi/debug/vexide-template.bin
+cargo pros upload --slot 1 --action none
 ```
 
 <!--
