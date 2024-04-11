@@ -78,6 +78,13 @@ Run the following terminal commands to set up your Mac for development.
   cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
   ```
 
+## Getting Started (NixOS)
+
+The Nix flake includes a devshell with every tool you need for building and uploading vexide projects.
+You still need to run ``rustup component add llvm-tools-preview`` if you haven't already.
+
+There is a `.envrc` file for Nix + Direnv users.
+
 ## Getting Started (Debian/Ubuntu Linux)
 
 Run the following terminal commands to set up your PC for development on Debian or Ubuntu.
