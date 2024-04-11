@@ -1,6 +1,6 @@
 # Vexide Template
 
-[![Build status](https://github.com/vexide/vexide-template/actions/workflows/rust.yml/badge.svg)](https://github.com/vexide/vexide-template/actions/workflows/rust.yml)
+[![Build status](https://github.com/vexide/vexide-template/actions/workflows/build.yml/badge.svg)](https://github.com/vexide/vexide-template/actions/workflows/build.yml)
 
 > Ready-to-use template for developing VEX V5 robots in Rust.
 
