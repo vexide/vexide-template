@@ -1,5 +1,6 @@
 use num_traits::Signed;
-use pros::prelude::*;
+use vexide::prelude::*;
+use vexide_devices::smart::motor::MotorError;
 
 /// Example implementation of a drivetrain subsystem.
 pub struct Drivetrain {
@@ -16,7 +17,7 @@ impl Drivetrain {
     }
 
     /// Drives at the specified speed forwards and rotates at the specified speed.
-    pub fn arcade_drive(&mut self, drive: f64, rotate: f64) -> Result {
+    pub fn arcade_drive(&mut self, drive: f64, rotate: f64) -> Result<(), MotorError> {
         // Implementation of https://xiaoxiae.github.io/Robotics-Simplified-Website/drivetrain-control/arcade-drive/
         let maximum = f64::max(drive.abs(), rotate.abs()) * 12.0;
         let total = (drive + rotate) * 12.0;
@@ -42,7 +43,7 @@ impl Drivetrain {
     }
 
     /// Drives the left and right motors at the specified speeds.
-    pub fn tank_drive(&mut self, left: f64, right: f64) -> Result {
+    pub fn tank_drive(&mut self, left: f64, right: f64) -> Result<(), MotorError> {
         self.left_motor.set_voltage(left * 12.0)?;
         self.right_motor.set_voltage(right * 12.0)?;
 
