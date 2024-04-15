@@ -5,7 +5,7 @@
 extern crate alloc;
 
 use alloc::boxed::Box;
-use core::{error::Error, time::Duration};
+use core::{error::Error, fmt::Write, time::Duration};
 
 use vexide::prelude::*;
 
@@ -22,8 +22,8 @@ impl Robot {
     fn new(peripherals: Peripherals) -> Result<Self, Box<dyn Error>> {
         Ok(Self {
             drivetrain: Drivetrain::new(
-                Motor::new(peripherals.port_1, Gearset::Green, Direction::Forward)?,
-                Motor::new(peripherals.port_2, Gearset::Green, Direction::Forward)?,
+                Motor::new(peripherals.port_1, Gearset::Green, Direction::Forward),
+                Motor::new(peripherals.port_2, Gearset::Green, Direction::Forward),
             ),
             controller: peripherals.primary_controller,
         })
@@ -35,8 +35,8 @@ impl CompetitionRobot for Robot {
 
     async fn driver(&mut self) -> Result<(), Box<dyn Error>> {
         loop {
-            let drive = self.controller.left_stick.y()? as f64;
-            let rotate = self.controller.right_stick.x()? as f64;
+            let drive = self.controller.left_stick.y().unwrap_or_default() as f64;
+            let rotate = self.controller.right_stick.x().unwrap_or_default() as f64;
 
             self.drivetrain.arcade_drive(drive, rotate)?;
 
@@ -52,18 +52,8 @@ impl CompetitionRobot for Robot {
     }
 }
 
-#[vexide_startup::main]
-async fn main(peripherals: Peripherals) {
-    if let Err(e) = start(peripherals).await {
-        println!("Error: {e}");
-    }
-
-    loop {
-        sleep(Duration::from_secs(1)).await;
-    }
-}
-
-async fn start(peripherals: Peripherals) -> Result<(), Box<dyn Error>> {
+#[vexide::main]
+async fn main(peripherals: Peripherals) -> Result<(), Box<dyn Error>> {
     let robot = Robot::new(peripherals)?;
     robot.compete().await?;
     Ok(())
