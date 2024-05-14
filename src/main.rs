@@ -5,7 +5,7 @@
 extern crate alloc;
 
 use alloc::boxed::Box;
-use core::{error::Error, fmt::Write, time::Duration};
+use core::{error::Error, time::Duration};
 
 use vexide::prelude::*;
 

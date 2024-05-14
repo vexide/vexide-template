@@ -1,6 +1,5 @@
 use num_traits::Signed;
-use vexide::prelude::*;
-use vexide_devices::smart::motor::MotorError;
+use vexide::{devices::smart::motor::MotorError, prelude::*};
 
 /// Example implementation of a drivetrain subsystem.
 pub struct Drivetrain {
