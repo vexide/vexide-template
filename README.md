@@ -51,7 +51,7 @@ Run the following commands in Powershell to set up your PC for development on Wi
   pip3.9 install --user pros-cli
   rustup default nightly
   rustup component add rust-src llvm-tools-preview
-  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
+  cargo install cargo-pros
   ```
 
 ## Getting Started (macOS)
@@ -78,7 +78,7 @@ Run the following terminal commands to set up your Mac for development.
 
   ```console
   rustup component add rust-src llvm-tools-preview
-  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
+  cargo install cargo-pros
   ```
 
 ## Getting Started (NixOS)
@@ -113,7 +113,7 @@ Run the following terminal commands to set up your PC for development on Debian 
   ```console
   rustup default nightly
   rustup component add rust-src llvm-tools-preview
-  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
+  cargo install cargo-pros
   ```
 
 ## Getting Started (Fedora Linux)
@@ -132,7 +132,7 @@ Run the following terminal commands to set up your PC for development on Fedora.
 
   ```console
   rustup component add rust-src llvm-tools-preview
-  cargo install --git "https://github.com/vexide/cargo-pros.git#feat/vexide-support"
+  cargo install cargo-pros
   ```
 
 ## Development
