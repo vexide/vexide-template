@@ -139,16 +139,16 @@ Run the following terminal commands to set up your PC for development on Fedora.
 
 ### Compiling and uploading to a VEX V5 robot
 
-Use the Cargo PROS terminal utility to build and upload this pros-rs project.
+Use the Cargo PROS terminal utility to build and upload this Vexide project.
 
 ```console
 cargo pros build
 ```
 
-Use a USB cable to connect to your robot brain or to your controller before uploading. Make sure to specify a program slot and post-upload action.
+Use a USB cable to connect to your robot brain or to your controller before using the `upload` subcommand to build and upload the project. Make sure to specify a program slot.
 
 ```console
-cargo pros upload --slot 1 --action none
+cargo pros upload --slot 1
 ```
 
 ### Viewing program output
@@ -160,23 +160,6 @@ Use a USB cable to connect to your robot brain or controller, then start the ter
 pros terminal --raw
 ```
 
-<!--
-### Debugging in the pros-rs simulator
-
-If you have PROS Simulator installed, you can use it to run this project without real VEX hardware for debugging and development purposes. Start by adding the WebAssembly Rust target:
-
-```console
-rustup target add wasm32-unknown-unknown
-```
-
-Build the project for the simulator by running:
-
-```console
-cargo pros build -s
-```
-
-Then open this project in PROS Simulator to run and debug the robot code.
--->
 ### Using smart editing features
 
 Developers using Visual Studio Code with the rust-analyzer extension have access to smart editing features like Intellisense and code analysis. By default, rust-analyzer will check the project for errors when it is saved.
