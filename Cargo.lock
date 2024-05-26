@@ -252,23 +252,17 @@ checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
 
 [[package]]
 name = "vex-sdk"
-version = "0.11.0"
+version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0522e11cadf40b45e5cc08d1279fe962693fc01f141e93598c27236d957c133"
-
-[[package]]
-name = "vex-sdk"
-version = "0.12.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b975ac9f3d592c4869e6096ef7d0f1bdc26f389fc66beafa0dfbc8a2f499d4a"
+checksum = "f96042448be8828098eb3c799071bbf5a9a1abc170264ac04ffeef355eb1d60a"
 
 [[package]]
 name = "vexide"
-version = "0.1.0"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0908b2427d99157425a0a21bf0176078dd2f4da67cf2682732ed247f5bae1dc2"
+checksum = "38b63f2e375cf177441368f12da0864a3c856285e861b408fdced8bb5c5fbe90"
 dependencies = [
- "vex-sdk 0.12.3",
+ "vex-sdk",
  "vexide-async",
  "vexide-core",
  "vexide-devices",
@@ -280,22 +274,22 @@ dependencies = [
 
 [[package]]
 name = "vexide-async"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ade8b959286c89b55d16decc62d65c9b39044abfd4037e6040ba23d545e6bf51"
+checksum = "29a7a8ff83836bd5c5d23e84ca1df87376b49bcb3cfaf93071f816258cf8117c"
 dependencies = [
  "async-task",
  "critical-section",
- "vex-sdk 0.12.3",
+ "vex-sdk",
  "vexide-core",
  "waker-fn",
 ]
 
 [[package]]
 name = "vexide-core"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "daf01212bdaa52945d1d8f74fd009664bd1e4482d27c1d1e11fb6e15cbd16e1b"
+checksum = "d149c51e15ca483d095c867d840db484f9e20b54034ba0510d7d72eb92d27245"
 dependencies = [
  "bitflags",
  "critical-section",
@@ -307,20 +301,20 @@ dependencies = [
  "replace_with",
  "snafu",
  "talc",
- "vex-sdk 0.12.3",
+ "vex-sdk",
 ]
 
 [[package]]
 name = "vexide-devices"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e9021e27996f1e7b6473743880346ff78c5403680703c72b852f417e62bc78f"
+checksum = "e70e60e2d4daa4dd9c251d96759028eed08624b9d9260df1bc9beea285b195b1"
 dependencies = [
  "bitflags",
  "mint",
  "no_std_io",
  "snafu",
- "vex-sdk 0.12.3",
+ "vex-sdk",
  "vexide-core",
 ]
 
@@ -336,9 +330,9 @@ dependencies = [
 
 [[package]]
 name = "vexide-math"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09234a2ce6dff60e52a76dedb9560e3bf94cad673d08be92a8ae87bc78de53e8"
+checksum = "a9630a004398ca6ead31471ebd8de7c74c07c2370b098bd663309e816b4f4be0"
 dependencies = [
  "num",
  "vexide-core",
@@ -346,22 +340,22 @@ dependencies = [
 
 [[package]]
 name = "vexide-panic"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8897751b47c4599e9556b10a4bf8381a485c91377c4ca63d2a2122cb285b8d77"
+checksum = "c7a4b149fdaff8166170bdd548080f841dd5b51faef7a1e02ed668062e84baf2"
 dependencies = [
- "vex-sdk 0.12.3",
+ "vex-sdk",
  "vexide-core",
  "vexide-devices",
 ]
 
 [[package]]
 name = "vexide-startup"
-version = "0.1.0"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "71f53543059c4c63b7390c2943d9e39661b2184e8d6f2dcf967383b3396bf1c2"
+checksum = "e0443b1b8a2669dfd477478e775c8cc50e93b181a67ade7093e220a9ad0eea89"
 dependencies = [
- "vex-sdk 0.12.3",
+ "vex-sdk",
  "vexide-async",
  "vexide-core",
  "vexide-devices",
@@ -372,7 +366,6 @@ name = "vexide-template"
 version = "0.1.0"
 dependencies = [
  "num-traits",
- "vex-sdk 0.11.0",
  "vexide",
 ]
 
