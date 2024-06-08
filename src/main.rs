@@ -12,7 +12,9 @@ use vexide::prelude::*;
 struct Robot {}
 
 impl Robot {
-    fn new(peripherals: Peripherals) -> Result<Self, Box<dyn Error>> {
+    /// Initialize the robot's peripherals, storing the subsystems
+    /// it will need to interact with.
+    fn new(_peripherals: Peripherals) -> Result<Self, Box<dyn Error>> {
         Ok(Self {})
     }
 }
