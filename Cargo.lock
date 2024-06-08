@@ -365,7 +365,6 @@ dependencies = [
 name = "vexide-template"
 version = "0.1.0"
 dependencies = [
- "num-traits",
  "vexide",
 ]
 
