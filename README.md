@@ -4,7 +4,7 @@
 
 > Ready-to-use template for developing VEX V5 robots in Rust.
 
-Seasoned Vexide user? Delete README.md and update Cargo.toml as needed.
+Seasoned vexide user? Delete README.md and update Cargo.toml as needed.
 
 ## Table of Contents
 
@@ -16,11 +16,10 @@ Seasoned Vexide user? Delete README.md and update Cargo.toml as needed.
   - [Getting Started (NixOS)](#getting-started-nixos)
   - [Getting Started (Debian/Ubuntu Linux)](#getting-started-debianubuntu-linux)
   - [Getting Started (Fedora Linux)](#getting-started-fedora-linux)
+  - [Learn](#learn)
   - [Development](#development)
     - [Compiling and uploading to a VEX V5 robot](#compiling-and-uploading-to-a-vex-v5-robot)
     - [Viewing program output](#viewing-program-output)
-    - [Using smart editing features](#using-smart-editing-features)
-  - [Troubleshooting](#troubleshooting)
 
 ## Using This Template
 
@@ -45,7 +44,7 @@ Run the following commands in Powershell to set up your PC for development on Wi
   winget install -s msstore "Python 3.9"
   ```
 
-- Close and reopen the terminal, and finish installing Vexide:
+- Close and reopen the terminal, and finish installing vexide:
 
   ```console
   pip3.9 install --user pros-cli
@@ -74,7 +73,7 @@ Run the following terminal commands to set up your Mac for development.
   pip3.10 install pros-cli
   ```
 
-- Close and reopen the terminal, and finish installing Vexide:
+- Close and reopen the terminal, and finish installing vexide:
 
   ```console
   rustup component add rust-src llvm-tools-preview
@@ -108,7 +107,7 @@ Run the following terminal commands to set up your PC for development on Debian 
   python3.9 -m pip install --user pros
   ```
 
-- Close and reopen the terminal, and finish installing Vexide:
+- Close and reopen the terminal, and finish installing vexide:
 
   ```console
   rustup default nightly
@@ -128,18 +127,24 @@ Run the following terminal commands to set up your PC for development on Fedora.
   pip install --user pros-cli
   ```
 
-- Close and reopen the terminal, and finish installing Vexide:
+- Close and reopen the terminal, and finish installing vexide:
 
   ```console
   rustup component add rust-src llvm-tools-preview
   cargo install cargo-pros cargo-binutils
   ```
 
+## Learn
+
+[Check out the documentation](https://vexide.dev/docs/) on the official vexide website for walkthrough-style guides and other helpful learning resources!
+
+An [API reference](https://docs.rs/vexide) is also provided by docs.rs.
+
 ## Development
 
 ### Compiling and uploading to a VEX V5 robot
 
-Use the Cargo PROS terminal utility to build and upload this Vexide project.
+Use the cargo-pros terminal utility to build and upload this vexide project.
 
 ```console
 cargo pros build
@@ -159,11 +164,3 @@ Use a USB cable to connect to your robot brain or controller, then start the ter
 ```console
 pros terminal --raw
 ```
-
-### Using smart editing features
-
-Developers using Visual Studio Code with the rust-analyzer extension have access to smart editing features like Intellisense and code analysis. By default, rust-analyzer will check the project for errors when it is saved.
-
-## Troubleshooting
-
-- If you get the error `TypeError: <flag 'BrainFlags'> has no members defined` when using the third party `pros upload` command, you need to downgrade Python to v3.9
