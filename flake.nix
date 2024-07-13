@@ -18,7 +18,7 @@
           buildInputs = [
             cargo-v5'
             (pkgs.rust-bin.nightly.latest.default.override {
-              extensions = [ "rust-src" "llvm-tools" "clippy" ];
+              extensions = [ "rust-src" "clippy" ];
             })
           ];
         };
