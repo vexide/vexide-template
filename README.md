@@ -38,19 +38,13 @@ Install Rust by following the instructions on <https://rustup.rs/>.
 
 Run the following commands in Powershell to set up your PC for development on Windows.
 
-- Install Python 3.9:
 
-  ```pwsh
-  winget install -s msstore "Python 3.9"
-  ```
-
-- Close and reopen the terminal, and finish installing vexide:
+- Install cargo-v5:
 
   ```console
-  pip3.9 install --user pros-cli
   rustup default nightly
-  rustup component add rust-src llvm-tools-preview
-  cargo install cargo-pros cargo-binutils
+  rustup component add rust-src
+  cargo install cargo-v5
   ```
 
 ## Getting Started (macOS)
@@ -83,7 +77,6 @@ Run the following terminal commands to set up your Mac for development.
 ## Getting Started (NixOS)
 
 The Nix flake includes a devshell with every tool you need for building and uploading vexide projects.
-You still need to run ``rustup component add llvm-tools-preview`` if you haven't already.
 
 There is a `.envrc` file for Nix + Direnv users.
 
@@ -97,41 +90,30 @@ Run the following terminal commands to set up your PC for development on Debian 
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
 
-- Install Python 3.9 and PROS:
-
-  ```console
-  sudo add-apt-repository ppa:deadsnakes/ppa
-  sudo apt update
-  sudo apt install python3.9 python3-pip python3.9-distutils
-
-  python3.9 -m pip install --user pros
-  ```
-
-- Close and reopen the terminal, and finish installing vexide:
+- Install cargo-v5:
 
   ```console
   rustup default nightly
-  rustup component add rust-src llvm-tools-preview
-  cargo install cargo-pros cargo-binutils
+  rustup component add rust-src
+  cargo install cargo-v5
   ```
 
 ## Getting Started (Fedora Linux)
 
 Run the following terminal commands to set up your PC for development on Fedora.
 
-- Install Rust and PROS:
+- Install Rust:
 
   ```console
-  sudo dnf install rustup python3-pip
+  sudo dnf install rustup
   rustup-init -y --default-toolchain nightly
-  pip install --user pros-cli
   ```
 
 - Close and reopen the terminal, and finish installing vexide:
 
   ```console
-  rustup component add rust-src llvm-tools-preview
-  cargo install cargo-pros cargo-binutils
+  rustup component add rust-src
+  cargo install cargo-v5
   ```
 
 ## Learn
@@ -147,13 +129,13 @@ An [API reference](https://docs.rs/vexide) is also provided by docs.rs.
 Use the cargo-pros terminal utility to build and upload this vexide project.
 
 ```console
-cargo pros build
+cargo v5 build
 ```
 
 Use a USB cable to connect to your robot brain or to your controller before using the `upload` subcommand to build and upload the project. Make sure to specify a program slot.
 
 ```console
-cargo pros upload --slot 1
+cargo v5 upload
 ```
 
 ### Viewing program output
@@ -162,5 +144,5 @@ You can view panic messages and calls to `println!()` using the PROS terminal.
 Use a USB cable to connect to your robot brain or controller, then start the terminal:
 
 ```console
-pros terminal --raw
+cargo v5 terminal
 ```

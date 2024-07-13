@@ -1,19 +1,26 @@
 {
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    cargo-pros.url = "github:vexide/cargo-pros";
-    pros-cli-nix.url = "github:BattleCh1cken/pros-cli-nix";
+    cargo-v5.url = "github:vexide/cargo-v5";
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
-  outputs = { nixpkgs, flake-utils, cargo-pros, pros-cli-nix, ... }:
+  outputs = { nixpkgs, flake-utils, rust-overlay, cargo-v5, ... }:
     (flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        cargo-pros' = cargo-pros.packages.${system}.default;
-        pros-cli = pros-cli-nix.packages.${system}.default;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ (import rust-overlay) ];
+        };
+        cargo-v5' = cargo-v5.packages.${system}.default;
       in {
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [ cargo-pros' pros-cli ];
+          buildInputs = [
+            cargo-v5'
+            (pkgs.rust-bin.nightly.latest.default.override {
+              extensions = [ "rust-src" "llvm-tools" "clippy" ];
+            })
+          ];
         };
       }));
 }
