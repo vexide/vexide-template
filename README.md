@@ -1,4 +1,4 @@
-# Vexide Template
+# vexide Template
 
 [![Build status](https://github.com/vexide/vexide-template/actions/workflows/build.yml/badge.svg)](https://github.com/vexide/vexide-template/actions/workflows/build.yml)
 
@@ -32,46 +32,55 @@ version = "0.1.0"
 edition = "2021"
 ```
 
+You can also configure your program slot and upload behavior in `Cargo.toml`:
+
+```toml
+[package.metadata.v5]
+slot = 1
+icon = "cool-x"
+compress = true
+```
+
+See our [Building & Uploading tutorial](https://vexide.dev/docs/building-uploading/) for more information.
+
 ## Getting Started (Windows)
 
-Install Rust by following the instructions on <https://rustup.rs/>.
+Follow the instructions [here](https://www.rust-lang.org/tools/install) to install `rustup`.
 
 Run the following commands in Powershell to set up your PC for development on Windows.
 
-
-- Install cargo-v5:
+- Switch to the `nightly` rust toolchain and add the `rust-src` component:
 
   ```console
   rustup default nightly
   rustup component add rust-src
+  ```
+
+- Install cargo-v5:
+
+  ```console
   cargo install cargo-v5
   ```
 
 ## Getting Started (macOS)
 
-Run the following terminal commands to set up your Mac for development.
+Follow the instructions [here](https://www.rust-lang.org/tools/install) to install `rustup` on your Mac.
 
-- Install Homebrew, a package manager for macOS:
+Run the following commands in a terminal window to setup development with vexide.
+
+- Open a terminal and configure `rustup` to build for the V5's platform target:
+
+- Switch to the `nightly` rust toolchain and add the `rust-src` component:
 
   ```console
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  rustup default nightly
+  rustup component add rust-src
   ```
 
-  - Under the header "Next Steps", Homebrew may prompt you to run commands to complete the installation.
-
-- Install Rust and PROS:
+- Install cargo-v5:
 
   ```console
-  brew install rustup python@3.10
-  rustup-init -y --default-toolchain nightly
-  pip3.10 install pros-cli
-  ```
-
-- Close and reopen the terminal, and finish installing vexide:
-
-  ```console
-  rustup component add rust-src llvm-tools-preview
-  cargo install cargo-pros cargo-binutils
+  cargo install cargo-v5
   ```
 
 ## Getting Started (NixOS)
@@ -82,19 +91,20 @@ There is a `.envrc` file for Nix + Direnv users.
 
 ## Getting Started (Debian/Ubuntu Linux)
 
-Run the following terminal commands to set up your PC for development on Debian or Ubuntu.
+Follow the instructions [here](https://www.rust-lang.org/tools/install) to install `rustup`. You may also prefer to install it from your system package manager or by other means. Instructions on that can be found [here](https://rust-lang.github.io/rustup/installation/other.html).
 
-- Install Rust:
+Run the following terminal commands to set up development on Debian or Ubuntu.
+
+- Switch to the `nightly` rust toolchain and add the `rust-src` component:
 
   ```console
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  rustup default nightly
+  rustup component add rust-src
   ```
 
 - Install cargo-v5:
 
   ```console
-  rustup default nightly
-  rustup component add rust-src
   cargo install cargo-v5
   ```
 
