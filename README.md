@@ -8,7 +8,7 @@ Seasoned vexide user? Delete README.md and update Cargo.toml as needed.
 
 ## Table of Contents
 
-- [Vexide Template](#vexide-template)
+- [vexide Template](#vexide-template)
   - [Table of Contents](#table-of-contents)
   - [Using This Template](#using-this-template)
   - [Getting Started (Windows)](#getting-started-windows)
@@ -41,7 +41,7 @@ icon = "cool-x"
 compress = true
 ```
 
-See our [Building & Uploading tutorial](https://vexide.dev/docs/building-uploading/) for more information.
+> See our [Building & Uploading tutorial](https://vexide.dev/docs/building-uploading/) for more information.
 
 ## Getting Started (Windows)
 
