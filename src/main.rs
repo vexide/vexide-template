@@ -1,38 +1,23 @@
 #![no_main]
 #![no_std]
 
-extern crate alloc;
-
-use alloc::boxed::Box;
-use core::error::Error;
-
 use vexide::prelude::*;
 
 struct Robot {}
 
-impl Robot {
-    /// Initialize the robot's peripherals, storing the subsystems
-    /// it will need to interact with.
-    fn new(_peripherals: Peripherals) -> Result<Self, Box<dyn Error>> {
-        Ok(Self {})
-    }
-}
-
-impl CompetitionRobot for Robot {
-    type Error = Box<dyn Error>;
-
-    async fn driver(&mut self) -> Result<(), Box<dyn Error>> {
-        println!("Hello world!");
-        Ok(())
+impl Compete for Robot {
+    async fn autonomous(&mut self) {
+        println!("Autonomous!");
     }
 
-    async fn autonomous(&mut self) -> Result<(), Box<dyn Error>> {
-        Ok(())
+    async fn driver(&mut self) {
+        println!("Driver!");
     }
 }
 
 #[vexide::main]
-async fn main(peripherals: Peripherals) -> Result<(), Box<dyn Error>> {
-    let robot = Robot::new(peripherals)?;
-    robot.compete().await
+async fn main(peripherals: Peripherals) {
+    let robot = Robot {};
+
+    robot.compete().await;
 }
