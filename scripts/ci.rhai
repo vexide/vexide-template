@@ -1,5 +1,5 @@
 if variable::get("use_ci") {
-    debug("Generating GitHub CI configuration...");
+    // debug("Generating GitHub CI configuration...");
     file::write(".github/workflows/build.yml", `
 name: Build
 
@@ -25,6 +25,6 @@ jobs:
                   command: check
 `);
 } else {
-    debug("Skipping GitHub CI configuration...");
+    // debug("Skipping GitHub CI configuration...");
     file::delete(".github");
 }
