@@ -1,6 +1,10 @@
 [template]
 cargo_generate_version = ">=0.9.0"
-ignore = ["target", ".DS_Store"]   # ideally this would include all of .gitignore
+ignore = [
+    "scripts",
+    "target",
+    ".DS_Store",
+] # ideally this would include all of .gitignore
 
 [conditional.'crate_type == "lib"']
 ignore = ["src/main.rs"]
@@ -47,4 +51,4 @@ choices = [
 ]
 
 [hooks]
-post = ["scripts/ci.rhai"]
+post = ["ci.rhai"]
