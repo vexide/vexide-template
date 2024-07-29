@@ -1,6 +1,8 @@
 # vexide Template
 
+<!--{% if false %}-->
 [![Build status](https://github.com/vexide/vexide-template/actions/workflows/build.yml/badge.svg)](https://github.com/vexide/vexide-template/actions/workflows/build.yml)
+<!--{% endif %}-->
 
 > Ready-to-use template for developing VEX V5 robots in Rust.
 
@@ -21,28 +23,28 @@ Seasoned vexide user? Delete README.md and update Cargo.toml as needed.
     - [Compiling and uploading to a VEX V5 robot](#compiling-and-uploading-to-a-vex-v5-robot)
     - [Viewing program output](#viewing-program-output)
 
+<!--{% if false %}-->
 ## Using This Template
 
-To start a project using this template, click the "Use this template" button in the upper right corner of the GitHub repository. Choose an appropriate name and clone the new repository using Git. Finally, update the package name in `Cargo.toml`:
+This template uses `cargo-generate`, which can be installed with the following command:
 
-```toml
-[package]
-name = "my-vex-robot"
-version = "0.1.0"
-edition = "2021"
+```sh
+cargo install cargo-generate
 ```
 
-You can also configure your program slot and upload behavior in `Cargo.toml`:
+Create a new vexide project by then running the following command:
 
-```toml
-[package.metadata.v5]
-slot = 1
-icon = "cool-x"
-compress = true
+```sh
+cargo generate vexide/vexide-template
 ```
 
-> See our [Building & Uploading tutorial](https://vexide.dev/docs/building-uploading/) for more information.
+Or, make a library instead:
 
+```sh
+cargo generate vexide/vexide-template --lib
+```
+
+<!--{% endif %}-->
 ## Getting Started (Windows)
 
 Follow the instructions [here](https://www.rust-lang.org/tools/install) to install `rustup`.

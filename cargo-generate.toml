@@ -1,0 +1,50 @@
+[template]
+cargo_generate_version = ">=0.9.0"
+ignore = ["target", ".DS_Store"]   # ideally this would include all of .gitignore
+
+[conditional.'crate_type == "lib"']
+ignore = ["src/main.rs"]
+
+[conditional.'crate_type == "bin"']
+ignore = ["src/lib.rs"]
+
+[placeholders]
+use_ci = { prompt = "Use recommended GitHub CI configuration?", default = true, type = "bool" }
+
+[conditional.'crate_type == "bin"'.placeholders]
+slot = { prompt = "Choose a default program slot (1-8/none):", default = "1", type = "string", regex = "^([1-8]|none)$" }
+
+[conditional.'crate_type == "bin"'.placeholders.icon]
+prompt = "Choose an icon for the program:"
+default = "cool-x"
+type = "string"
+choices = [
+    "cool-x",
+    "vex-coding-studio",
+    "question-mark",
+    "pizza",
+    "clawbot",
+    "robot",
+    "power-button",
+    "planets",
+    "alien",
+    "alien-in-ufo",
+    "cup-in-field",
+    "cup-and-ball",
+    "matlab",
+    "pros",
+    "robot-mesh",
+    "robot-mesh-cpp",
+    "robot-mesh-blockly",
+    "robot-mesh-flowol",
+    "robot-mesh-js",
+    "robot-mesh-py",
+    "code-file",
+    "vexcode-brackets",
+    "vexcode-blocks",
+    "vexcode-python",
+    "vexcode-cpp",
+]
+
+[hooks]
+post = ["scripts/ci.rhai"]

@@ -5,11 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+{% if crate_type == "bin" %}
 # These fields configure default behavior for uploads with `cargo v5`.
 [package.metadata.v5]
-slot = 1
-icon = "cool-x"
+{% if slot != "none" %}
+slot = {{ slot }}
+{% endif %}
+icon = "{{ icon }}"
 compress = true
+{% endif %}
 
 [dependencies]
 vexide = "0.3.0"
