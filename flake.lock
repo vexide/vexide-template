@@ -8,11 +8,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1720818056,
-        "narHash": "sha256-LRi4emtYdZ1gW9H5L+DRk9iEybP7Z/1ebaERfVdKSUY=",
+        "lastModified": 1722727173,
+        "narHash": "sha256-Dtgs27miPLG2FcQTLSVAkmH3/t9mOWVesLjQqbpNNUw=",
         "owner": "vexide",
         "repo": "cargo-v5",
-        "rev": "71eede235d9aa435651c45756772984808d0c27d",
+        "rev": "f3e36fe735ed910649fdfc1a8e7a5d14010b4de0",
         "type": "github"
       },
       "original": {
@@ -165,11 +165,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1720750737,
-        "narHash": "sha256-hPXe9Pr3s2EKRdDki3UkCKoPGlNkOhplCooNoC/L7Qc=",
+        "lastModified": 1723602049,
+        "narHash": "sha256-Z/noCSn9WPkv7O77dWKLcBxe4Ub4bWyNzsL5JhjaQfw=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "a17c5d38c6fe47880eb8c6bede15d943ac2c4d17",
+        "rev": "ea0bf33a11a26a62c60123c49d96011da396602c",
         "type": "github"
       },
       "original": {
