@@ -1,4 +1,3 @@
 [toolchain]
 channel = "nightly"
 components = ["rust-src", "llvm-tools"]
-targets = ["armv7a-none-eabi"]
