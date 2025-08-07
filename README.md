@@ -23,7 +23,7 @@ Seasoned vexide user? Delete README.md and update Cargo.toml as needed.
 
 ## Using This Template
 
-To start a project using this template, click the "Use this template" button in the upper right corner of the GitHub repository. Choose an appropriate name and clone the new repository using Git. Finally, update the package name in `Cargo.toml`:
+To create a project using this template, click the "[Use this template](https://github.com/new?template_name=vexide-template&template_owner=vexide)" button in the upper right corner of the GitHub repository. Choose an appropriate name and clone the new repository using Git. Finally, update the package name in `Cargo.toml`:
 
 ```toml
 [package]
