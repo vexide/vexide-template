@@ -17,8 +17,7 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             cargo-v5'
-            pkgs.cargo-binutils
-            (pkgs.rust-bin.nightly."2024-12-06".default.override {
+            (pkgs.rust-bin.nightly.latest.default.override {
               extensions = [ "rust-analyzer" "rust-src" "clippy" "llvm-tools" ];
             })
           ];

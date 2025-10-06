@@ -1,6 +1,6 @@
 # vexide Template
 
-[![Build status](https://github.com/vexide/vexide-template/actions/workflows/build.yml/badge.svg)](https://github.com/vexide/vexide-template/actions/workflows/build.yml)
+[![Build status](https://github.com/vexide/vexide-template/actions/workflows/rust.yml/badge.svg)](https://github.com/vexide/vexide-template/actions/workflows/rust.yml)
 
 > Ready-to-use template for developing VEX V5 robots in Rust.
 
@@ -29,7 +29,7 @@ To create a project using this template, click the "[Use this template](https://
 [package]
 name = "my-vex-robot"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 ```
 
 You can also configure your program slot and upload behavior in `Cargo.toml`:

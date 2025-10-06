@@ -1,3 +1,4 @@
 [toolchain]
 channel = "nightly"
-components = ["rust-src", "llvm-tools"]
+components = ["rust-src"]
+targets = ["armv7a-vex-v5"]
