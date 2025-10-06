@@ -3,7 +3,9 @@ name = "vexide-template"
 version = "0.1.0"
 edition = "2024"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = "z"
+lto = "fat"
 
 # These fields configure default behavior for uploads with `cargo v5`.
 [package.metadata.v5]
@@ -18,3 +20,5 @@ vexide = { git = "https://github.com/vexide/vexide.git", branch = "refactor/upst
     "vex-sdk-jumptable",
     "vex-sdk-mock",
 ] }
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
