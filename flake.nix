@@ -20,7 +20,7 @@
           buildInputs = [
             cargo-v5'
             (rustToolchain.default.override {
-              extensions = [ "rust-analyzer" "rust-src" "clippy" "llvm-tools" ];
+              extensions = [ "rust-analyzer" "rust-src" "clippy" ];
             })
           ];
         };
