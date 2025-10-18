@@ -14,11 +14,12 @@ slot = 1
 icon = "cool-x"
 compress = true
 
-[dependencies]
-vexide = { git = "https://github.com/vexide/vexide.git", branch = "refactor/upstreamed-target+rust-std", features = [
+[dependencies.vexide]
+version = "0.8.0-alpha.1"
+features = [
     "full",
     "vex-sdk-jumptable",
     "vex-sdk-mock",
-] }
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
