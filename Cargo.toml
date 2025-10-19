@@ -13,4 +13,4 @@ icon = "cool-x"
 compress = true
 
 [dependencies]
-vexide = { version = "0.7.0", features = ["backtraces", "startup"], default-features = false}
+vexide = "0.7.0"
