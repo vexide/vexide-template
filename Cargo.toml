@@ -1,9 +1,11 @@
 [package]
 name = "vexide-template"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = "z"
+lto = "fat"
 
 # These fields configure default behavior for uploads with `cargo v5`.
 [package.metadata.v5]
@@ -12,5 +14,12 @@ slot = 1
 icon = "cool-x"
 compress = true
 
-[dependencies]
-vexide = "0.7.0"
+[dependencies.vexide]
+version = "0.8.0-alpha.2"
+features = [
+    "full",
+    "vex-sdk-jumptable",
+    "vex-sdk-mock",
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

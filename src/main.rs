@@ -1,6 +1,3 @@
-#![no_main]
-#![no_std]
-
 use vexide::prelude::*;
 
 struct Robot {}
@@ -20,4 +17,12 @@ async fn main(peripherals: Peripherals) {
     let robot = Robot {};
 
     robot.compete().await;
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_adds_two() {
+        assert_eq!(2 + 2, 4);
+    }
 }
