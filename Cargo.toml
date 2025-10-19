@@ -15,7 +15,7 @@ icon = "cool-x"
 compress = true
 
 [dependencies.vexide]
-version = "0.8.0-alpha.1"
+version = "0.8.0-alpha.2"
 features = [
     "full",
     "vex-sdk-jumptable",

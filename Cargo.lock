@@ -392,9 +392,9 @@ dependencies = [
 
 [[package]]
 name = "vexide"
-version = "0.8.0-alpha.1"
+version = "0.8.0-alpha.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72a7b1ef976340291a9d4324fb3502e2af31b0803d470be6e34ba3937a2e03f5"
+checksum = "098f95d027dbaa75a19db9fb36e7b80e2ec4cbf16a3a94f80e5d4ff588f1e6b9"
 dependencies = [
  "vex-sdk",
  "vexide-async",
@@ -406,9 +406,9 @@ dependencies = [
 
 [[package]]
 name = "vexide-async"
-version = "0.2.0-alpha.1"
+version = "0.2.0-alpha.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "98196fb97a5c42effb0c22da1e9da2d7a0af0f23e661e3aa7a79f42e47cb8771"
+checksum = "dfaa63e67bf9ddc89ccd9939d54f9eac7a86db53df9a7c38b83ab31f39925df2"
 dependencies = [
  "async-lock",
  "async-task",
@@ -418,9 +418,9 @@ dependencies = [
 
 [[package]]
 name = "vexide-core"
-version = "0.8.0-alpha.1"
+version = "0.8.0-alpha.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "886127c68380b25bd7d8c0287448e58027f21b4553d91521675efb7780bdefae"
+checksum = "21b33d7ccfbf19c82849fe87d1fa91641950daccc7e4c7181681f5d4fe2c4317"
 dependencies = [
  "bitflags",
  "futures-core",
@@ -431,9 +431,9 @@ dependencies = [
 
 [[package]]
 name = "vexide-devices"
-version = "0.8.0-alpha.1"
+version = "0.8.0-alpha.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "009b787ba5041caa6d5f2f34520eeffdb121e0747858f1df5845e43d88825148"
+checksum = "2e64f6c970b3aa0ad1e583f1906b725c3aaf7dc45ab1aef5c8ff363416407cfa"
 dependencies = [
  "bitflags",
  "libm",
@@ -447,9 +447,9 @@ dependencies = [
 
 [[package]]
 name = "vexide-macro"
-version = "0.4.0-alpha.1"
+version = "0.4.0-alpha.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e054f2956b6be9c3849ec197f051901764b7d146b04a7a2f3bef1a9564cef426"
+checksum = "40830d8f5a22d62398f12fbc997fa2650f9e430ffb6ff501f27e4aa14e0c6d3a"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -458,9 +458,9 @@ dependencies = [
 
 [[package]]
 name = "vexide-startup"
-version = "0.5.0-alpha.1"
+version = "0.5.0-alpha.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "19f827617d634ee18c7db0f5388a9e2b87b5690cadbf46be3bcc2ef30db8a2a1"
+checksum = "d5ed35ab48ef0acfea49715a307ddb4d981183af3eae065046621bbd8a54f7f2"
 dependencies = [
  "bitflags",
  "compile-time",
