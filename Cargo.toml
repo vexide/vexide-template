@@ -15,6 +15,6 @@ icon = "cool-x"
 compress = true
 
 [dependencies]
-vexide = { version = "0.8.0", features = [ "full", "vex-sdk-jumptable", "vex-sdk-mock"] }
+vexide = { version = "0.8.0", features = ["full", "default-sdk"] }
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
